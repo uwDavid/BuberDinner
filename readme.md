@@ -15,10 +15,18 @@ dotnet new classlib -o BuberDinner.Domain
 ```
 
 In order for us to build the solution, we need to add the projects to the solution.
+On Windows:
 
 ```
 dotnet sln add (ls -r **\*.csproj)
+
+```
+
+On Linux:
+
+```
 find ./ -name *.csproj | xargs dotnet sln add
+ls -r **/*.csproj | xargs dotnet sln add
 ```
 
 Now `dotnet bulid` will work properly.
