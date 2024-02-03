@@ -33,3 +33,9 @@
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Application.pdb
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Infrastructure.pdb
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Domain.pdb
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.sourcelink.json

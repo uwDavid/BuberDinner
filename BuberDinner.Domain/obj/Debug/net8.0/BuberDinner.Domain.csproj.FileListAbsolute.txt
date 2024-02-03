@@ -9,3 +9,4 @@
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/refint/BuberDinner.Domain.dll
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.pdb
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/ref/BuberDinner.Domain.dll
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.sourcelink.json

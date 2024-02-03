@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 // we moved this line to Applicaiton Layer, by using the DependencyInjection.Abstractions package
 builder.Services
     .AddApplication()
-    .AddInfrastructure();
+    .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

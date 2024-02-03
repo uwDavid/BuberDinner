@@ -13,3 +13,4 @@
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/bin/Debug/net8.0/BuberDinner.Domain.pdb
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/obj/Debug/net8.0/BuberDinner.Application.csproj.AssemblyReference.cache
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/obj/Debug/net8.0/BuberDinner.Application.csproj.CopyComplete
+/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/obj/Debug/net8.0/BuberDinner.Application.sourcelink.json
