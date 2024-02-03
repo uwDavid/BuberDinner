@@ -1,0 +1,6 @@
+@BuberDinner.Api_HostAddress = http://localhost:5104
+
+GET {{BuberDinner.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

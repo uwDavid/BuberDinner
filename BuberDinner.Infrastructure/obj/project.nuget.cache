@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WEhUjWC/E63DjN3yoZ2kzvIkPPxViZ6NG9xstu5qdRJBLin0Okd3phneDChy46D/GB9pGEpSNWljWNmZSYy4Dg==",
+  "success": true,
+  "projectFilePath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/purple/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
