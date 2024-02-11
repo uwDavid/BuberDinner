@@ -76,3 +76,47 @@ dotnet add BuberDinner.Infrastructure/ package Microsoft.Extensions.Options.Conf
 We chained `Infrastructure` dependency injection in `Api` layer. 
 We used the `Configuration Manager` in `Infrastructure` layer to obtain JwtSettings from the `Api` layer. 
 Find the JwtSetting in `appsettings.json` files in `Api` layer.
+
+## 3 - Repository Pattern
+Now we implement the repository pattern for our Authentication Service. 
+
+**Step 1: Create User Model**
+We create the `User` model in the `Domain` project.
+VS Code shortcut to write out properties in Entity Domain.
+Type `prop` and hit tab to generate:
+```cs
+public TYPE Type {get; set;}
+```
+
+```cs
+public Guid Id { get; set; } = Guid.NewGuid();
+// If we don't specify a Guid, then generate a new Guid
+public string FirstName { get; set; } = null!;
+// Ctrl + . Use null-forgiving operator
+// Tells compiler that this value can be null, to suppress error
+```
+
+**Step 2: Create Respository Interface**
+We create the interface `IUserRepository` at the `Application` layer, and then inject this interface into the `AuthenticationService.cs`.
+Then we need to code the `AuthenticationService.cs` on how the `_userRepository` is to be used. 
+
+**Step 3: Implement Repository**
+We then implement the `UserRepository` at the `Infrastructure` layer. 
+
+**Step 4: Dependency Injection**
+Inject the dependency at the `Infrastructure` layer, in `DependencyInjection.cs`.
+Note: this is done in the previous sections on how we made this possible via the `DependencyInjection.Abstractions` package. 
+
+**Note**
+If we add the service as `AddScoped` it will create a new list for every request.
+Thus, we have to make the List of `Users` static. 
+
+**Refactoring**
+We change the `AuthenticationResult` to use `User` entity model, instead of the individual string fields. 
+Then we make the appropriate refactoring in `AuthenticationService.cs` in `Application` and `AuthenticationController.cs` in `Api`. 
+
+We also want the `JWT Token Generator` to use `User` entity model as well. 
+We need to refactor:
+- `IJwtGenerator.cs` in `Application` 
+- `JwtGenerator.cs` in `Infrastructure`
+- `AuthenticationService` in `Application`
