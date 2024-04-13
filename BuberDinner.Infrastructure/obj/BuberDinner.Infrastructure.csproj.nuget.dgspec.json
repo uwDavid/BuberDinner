@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj": {}
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj": {
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj",
+        "projectUniqueName": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj",
         "projectName": "BuberDinner.Application",
-        "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj",
+        "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj",
         "packagesPath": "/home/purple/.nuget/packages/",
-        "outputPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/obj/",
+        "outputPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/purple/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj": {
-                "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj"
+              "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj": {
+                "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj"
               }
             }
           }
@@ -36,6 +36,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,18 +68,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj": {
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj",
+        "projectUniqueName": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj",
         "projectName": "BuberDinner.Domain",
-        "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj",
+        "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj",
         "packagesPath": "/home/purple/.nuget/packages/",
-        "outputPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Domain/obj/",
+        "outputPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/purple/.nuget/NuGet/NuGet.Config"
@@ -95,6 +100,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -116,18 +126,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj": {
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
+        "projectUniqueName": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
         "projectName": "BuberDinner.Infrastructure",
-        "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
+        "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
         "packagesPath": "/home/purple/.nuget/packages/",
-        "outputPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Infrastructure/obj/",
+        "outputPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/purple/.nuget/NuGet/NuGet.Config"
@@ -142,8 +152,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj": {
-                "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj"
+              "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj": {
+                "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj"
               }
             }
           }
@@ -152,6 +162,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -191,7 +206,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

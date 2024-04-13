@@ -10,3 +10,15 @@
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.pdb
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/ref/BuberDinner.Contracts.dll
 /home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.sourcelink.json
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.deps.json
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.pdb
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfoInputs.cache
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfo.cs
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.csproj.CoreCompileInputs.cache
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.sourcelink.json
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/refint/BuberDinner.Contracts.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.pdb
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/ref/BuberDinner.Contracts.dll

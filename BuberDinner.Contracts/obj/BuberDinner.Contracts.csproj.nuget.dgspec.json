@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj": {}
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj": {}
   },
   "projects": {
-    "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj": {
+    "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj",
+        "projectUniqueName": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj",
         "projectName": "BuberDinner.Contracts",
-        "projectPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj",
+        "projectPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/BuberDinner.Contracts.csproj",
         "packagesPath": "/home/purple/.nuget/packages/",
-        "outputPath": "/home/purple/0Code/1dotnet/BuberDinner/BuberDinner.Contracts/obj/",
+        "outputPath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/purple/.nuget/NuGet/NuGet.Config"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
