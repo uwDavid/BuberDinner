@@ -81,3 +81,6 @@
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.genruntimeconfig.cache
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/ref/BuberDinner.Api.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/ErrorOr.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.Contracts.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.Extensions.Microsoft.DependencyInjection.dll

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "K09/cXJa5z0Q+Ih09V3752l8YoAn3puZ4iB9N0ZHdfFYB+w0tTpgqIEKSZnygdOLmzQu/obFtnxd5XWkevYn6Q==",
+  "dgSpecHash": "MrCCwlh+8ZWENiglzRB4zjIeQ9H7rZ7aLlaH1LR1Z/E2+mdGqXxZoBnV0Dm8hFcvcrrYr3PC1vzS+8rRpnFlvA==",
   "success": true,
   "projectFilePath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Application/BuberDinner.Application.csproj",
   "expectedPackageFiles": [
     "/home/purple/.nuget/packages/erroror/2.0.1/erroror.2.0.1.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "/home/purple/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []

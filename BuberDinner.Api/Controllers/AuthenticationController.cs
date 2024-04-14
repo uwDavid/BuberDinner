@@ -1,43 +1,43 @@
 namespace BuberDinner.Api.Controllers;
 
-using BuberDinner.Application.Services.Authentication.Commands;
+using BuberDinner.Application.Authentication.Commands.Register;
+using BuberDinner.Application.Authentication.Queries.Login;
 using BuberDinner.Application.Services.Authentication.Common;
-using BuberDinner.Application.Services.Authentication.Queries;
 using BuberDinner.Contracts.Authentication;
 using BuberDinner.Domain.Common.Errors;
 using ErrorOr;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 [Route("auth")]
 // [ErrorHandlingFilter]
 public class AuthenticationController : ApiController
 {
-    private readonly IAuthenticationCommandService _authenticationCommandService;
-    private readonly IAuthenticationQueryService _authenticationQueryService;
+    private readonly ISender _mediator;
+    // private readonly IMediator _mediator;
+    // Mediator interface has ISender & IPublisher interface - let's use ISender
 
-    public AuthenticationController(
-        IAuthenticationCommandService authenticationCommandService,
-        IAuthenticationQueryService authenticationQueryService)
+    public AuthenticationController(ISender mediator)
     {
-        _authenticationCommandService = authenticationCommandService;
-        _authenticationQueryService = authenticationQueryService;
+        _mediator = mediator;
     }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        //Register Service 
-        ErrorOr<AuthenticationResult> registerResult = _authenticationCommandService.Register(
+        var command = new RegisterCommand(
             request.FirstName,
             request.LastName,
             request.Email,
-            request.Password
-        );
+            request.Password);
 
-        // MatchFirst() returns the first error
+        //Register Service 
+        ErrorOr<AuthenticationResult> registerResult = await _mediator.Send(command);
+
         return registerResult.Match(
             registerResult => Ok(MapAuthResult(registerResult)),
             errors => Problem(errors)
+        // MatchFirst() returns the first error
         // pass errors to ApiController's Problem()
         // firstError => Problem(statusCode: StatusCodes.Status409Conflict, title: firstError.Description)
         );
@@ -64,13 +64,12 @@ public class AuthenticationController : ApiController
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
+        var query = new LoginQuery(request.Email, request.Password);
+
         //Register Service 
-        var authResult = _authenticationQueryService.Login(
-            request.Email,
-            request.Password
-        );
+        var authResult = await _mediator.Send(query);
 
         if (authResult.IsError && authResult.FirstError == Errors.Authentication.InvalidCredentials)
         {

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "cottYk6I1iNnF6Z4+L2VMKesLhdx9ZAzjiH6oehqBRQ0eEHiHMKF2qw/RQINxpZ7WTPQL7zm+BRdVQo5BgdmZw==",
+  "dgSpecHash": "KPQuiD7JNtIvhJEAWZYvhhp8Lt2JCYMssHKrMCEF5GgaaiZsUmd/BwT1y6w65NqfYLw+LnzfoW0rytOrw3/nQA==",
   "success": true,
   "projectFilePath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Infrastructure/BuberDinner.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/purple/.nuget/packages/erroror/2.0.1/erroror.2.0.1.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/home/purple/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "/home/purple/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/home/purple/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/home/purple/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
