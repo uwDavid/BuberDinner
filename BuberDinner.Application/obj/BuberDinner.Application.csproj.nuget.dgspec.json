@@ -51,9 +51,9 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "oneof": {
+            "fluentResults": {
               "target": "Package",
-              "version": "[3.0.263, )"
+              "version": "[3.15.2, )"
             }
           },
           "imports": [
