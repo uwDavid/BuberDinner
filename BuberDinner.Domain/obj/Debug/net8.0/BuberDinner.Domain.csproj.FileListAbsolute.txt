@@ -22,3 +22,4 @@
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/refint/BuberDinner.Domain.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.pdb
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/ref/BuberDinner.Domain.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.csproj.AssemblyReference.cache

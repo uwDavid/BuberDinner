@@ -1,15 +1,14 @@
 namespace BuberDinner.Api.Controllers;
 
-using BuberDinner.Application.Common.Errors;
 using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
-using FluentResults;
+using BuberDinner.Domain.Common.Errors;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 
-[ApiController]
 [Route("auth")]
 // [ErrorHandlingFilter]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -22,53 +21,31 @@ public class AuthenticationController : ControllerBase
     public IActionResult Register(RegisterRequest request)
     {
         //Register Service 
-        Result<AuthenticationResult> registerResult = _authenticationService.Register(
+        ErrorOr<AuthenticationResult> registerResult = _authenticationService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password
         );
 
-        if (registerResult.IsSuccess)
-        {
-            return Ok(MapAuthResult(registerResult.Value));
-        }
-        var firstError = registerResult.Errors[0];
-        if (firstError is DuplicateEmailError)
-        {
-            return Problem(statusCode: StatusCodes.Status409Conflict, detail: "Email already exists");
-        }
-        return Problem();
+        // MatchFirst() returns the first error
+        return registerResult.Match(
+            registerResult => Ok(MapAuthResult(registerResult)),
+            errors => Problem(errors)
+        // pass errors to ApiController's Problem()
+        // firstError => Problem(statusCode: StatusCodes.Status409Conflict, title: firstError.Description)
+        );
 
-        // return registerResult.Match(
-        //     authResult => Ok(MapAuthResult(authResult)),
-        //     error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage)
-        // );
-
-        /* 
-        if (registerResult.IsT0)
-        {
-            var authResult = registerResult.AsT0;
-            // Map result to Contract
-            /*
-            var res = new AuthenticationResponse(
-                authResult.User.Id,
-                authResult.User.FirstName,
-                authResult.User.LastName,
-                authResult.User.Email,
-                authResult.Token
-            ); 
-
-            // Mapping method
-            AuthenticationResponse response = MapAuthResult(authResult);
-
-            return Ok(res);
-        }
-        return Problem(statusCode: StatusCodes.Status409Conflict, title: "Email already exists");
+        /* Match() returns a list of errors 
+        return registerResult.Match(
+            registerResult => Ok(MapAuthResult(registerResult)),
+            _ => Problem(statusCode: StatusCodes.Status409Conflict, title: "User already exists.")
+        );
         */
     }
 
-    // mapping method
+    // mapping method 
+    // shortcut to create the method => select all the properties => extract method
     private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
     {
         return new AuthenticationResponse(
@@ -89,15 +66,16 @@ public class AuthenticationController : ControllerBase
             request.Password
         );
 
-        // Map result to Contract
-        var res = new AuthenticationResponse(
-            authResult.User.Id,
-            authResult.User.FirstName,
-            authResult.User.LastName,
-            authResult.User.Email,
-            authResult.Token
-        );
+        if (authResult.IsError && authResult.FirstError == Errors.Authentication.InvalidCredentials)
+        {
+            return Problem(
+                statusCode: StatusCodes.Status401Unauthorized,
+                title: authResult.FirstError.Description);
+        }
 
-        return Ok(res);
+        return authResult.Match(
+            authResult => Ok(MapAuthResult(authResult)),
+            errors => Problem(errors)
+        );
     }
 }

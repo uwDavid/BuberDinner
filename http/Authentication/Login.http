@@ -1,4 +1,4 @@
-@url = http://localhost:5104
+@url = http://localhost:5000
 
 POST {{url}}/auth/login
 Content-Type: application/json

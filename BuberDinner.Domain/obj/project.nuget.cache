@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5LqWcOvmDnxc9ecv2YxwGsONKpOr3mMDTAfVUOudkAnuSa95JLvbAkziw4h8PenNf7mxDwyD1nar+PYuA2tX/g==",
+  "dgSpecHash": "pJ6Z32b2xP4SKHHLH8m9j/13d/hUyKk/93k7vgL4XXjXYzjiRzPQEVkX5qH3+3oRbiD5Bz6edNL32kQH/ZoqwQ==",
   "success": true,
   "projectFilePath": "/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Domain/BuberDinner.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/purple/.nuget/packages/erroror/2.0.1/erroror.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

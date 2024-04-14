@@ -1,9 +1,9 @@
-using System.Reflection.Metadata.Ecma335;
 using BuberDinner.Application.Common.Errors;
 using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Domain.Common.Errors;
 using BuberDinner.Domain.Entities;
-using FluentResults;
+using ErrorOr;
 
 namespace BuberDinner.Application.Services.Authentication;
 
@@ -18,7 +18,7 @@ public class AuthenticationService : IAuthenticationService
         _userRepository = userRepository;
     }
 
-    public Result<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
+    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
     {
         // 1. Check if user exists
         if (_userRepository.GetUserByEmail(email) is not null)
@@ -26,7 +26,8 @@ public class AuthenticationService : IAuthenticationService
             // throw new DuplicateEmailException();
             // throw new Exception("Email already registered");
             // return Result.Fail<AuthenticationResult>(new DuplicateEmailError());
-            return Result.Fail<AuthenticationResult>(new[] { new DuplicateEmailError() });
+            // return Result.Fail<AuthenticationResult>(new[] { new DuplicateEmailError() });
+            return Errors.User.DuplicateEmail;
         }
         // 2. Create user (generate guid)
         var user = new User
@@ -48,19 +49,23 @@ public class AuthenticationService : IAuthenticationService
             token);
     }
 
-    public AuthenticationResult Login(string email, string password)
+    public ErrorOr<AuthenticationResult> Login(string email, string password)
     {
         // 1. Check if user exists
         // Note syntax sugar used here for user
         if (_userRepository.GetUserByEmail(email) is not User user)
         {
-            throw new Exception("User does not exist.");
+            return Errors.Authentication.InvalidCredentials;
+            // throw new Exception("User does not exist.");
             // Temporary implementation, this is not a secure practice
         }
         // 2. Validate password is correct
         if (user.Password != password)
         {
-            throw new Exception("Invalid password.");
+            // return Errors.Authentication.InvalidCredentials;
+            return new[] { Errors.Authentication.InvalidCredentials };
+
+            // throw new Exception("Invalid password.");
         }
         // 3. Create JWT token
         var token = _jwtGenerator.GenerateToken(user);
