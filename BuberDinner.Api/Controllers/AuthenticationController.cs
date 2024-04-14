@@ -1,9 +1,10 @@
 namespace BuberDinner.Api.Controllers;
 
-using BuberDinner.Api.Filters;
+using BuberDinner.Application.Common.Errors;
 using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using OneOf;
 
 [ApiController]
 [Route("auth")]
@@ -20,24 +21,53 @@ public class AuthenticationController : ControllerBase
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request)
     {
+        "Eamil already exists."
         //Register Service 
-        var authResult = _authenticationService.Register(
+        OneOf<AuthenticationResult, IError> registerResult = _authenticationService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password
         );
 
-        // Map result to Contract
-        var res = new AuthenticationResponse(
+        return registerResult.Match(
+            authResult => Ok(MapAuthResult(authResult)),
+            error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage)
+        );
+
+        /* 
+        if (registerResult.IsT0)
+        {
+            var authResult = registerResult.AsT0;
+            // Map result to Contract
+            /*
+            var res = new AuthenticationResponse(
+                authResult.User.Id,
+                authResult.User.FirstName,
+                authResult.User.LastName,
+                authResult.User.Email,
+                authResult.Token
+            ); 
+
+            // Mapping method
+            AuthenticationResponse response = MapAuthResult(authResult);
+
+            return Ok(res);
+        }
+        return Problem(statusCode: StatusCodes.Status409Conflict, title: "Email already exists");
+        */
+    }
+
+    // mapping method
+    private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
+    {
+        return new AuthenticationResponse(
             authResult.User.Id,
             authResult.User.FirstName,
             authResult.User.LastName,
             authResult.User.Email,
             authResult.Token
         );
-
-        return Ok(res);
     }
 
     [HttpPost("login")]

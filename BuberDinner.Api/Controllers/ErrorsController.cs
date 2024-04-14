@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using BuberDinner.Application.Common.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +11,13 @@ public class ErrorsController : ControllerBase
     public IActionResult Error()
     {
         Exception? ex = HttpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
-        return Problem(title: ex?.Message, statusCode: 400);
+
+        var (statusCode, message) = ex switch
+        {
+            IServiceException serviceException => ((int)serviceException.StatusCode, serviceException.ErrorMessage),
+            _ => (StatusCodes.Status500InternalServerError, "Uexpected error occurred."),
+        };
+
+        return Problem(statusCode: statusCode, title: message);
     }
 }

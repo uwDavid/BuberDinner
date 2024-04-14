@@ -80,3 +80,4 @@
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.pdb
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.genruntimeconfig.cache
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/ref/BuberDinner.Api.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/OneOf.dll

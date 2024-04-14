@@ -25,7 +25,7 @@ builder.Services
 
 // Opt 3 step 2: custom ProblemDetails factory w additional properties
 // custom Problem() to add custom properties
-// builder.Services.AddSingleton<ProblemDetailsFactory, BDProblemDetailsFactory>();
+builder.Services.AddSingleton<ProblemDetailsFactory, BDProblemDetailsFactory>();
 
 var app = builder.Build();
 
@@ -36,12 +36,15 @@ var app = builder.Build();
 // This adds a middleware to the pipeline => catch Exception, log, reset req path, re-execute
 app.UseExceptionHandler("/error");
 
+// Option 3c: quick middleware - if we don't define a controller
+/* 
 app.Map("/error", (HttpContext httpContext) =>
 {
     Exception? ex = httpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
     return Results.Problem();
     // in source => there's a dictionary of extensions for additional properties
 });
+*/
 
 app.UseHttpsRedirection();
 app.MapControllers();
