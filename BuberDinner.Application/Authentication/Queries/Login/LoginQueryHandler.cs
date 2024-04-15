@@ -20,6 +20,8 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<Authenticat
 
     public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
+        await Task.CompletedTask; // get rid of Async warnning 
+
         // 1. Check if user exists
         // Note syntax sugar used here for user
         if (_userRepository.GetUserByEmail(query.Email) is not User user)

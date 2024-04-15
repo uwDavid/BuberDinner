@@ -1,8 +1,7 @@
-using BuberDinner.Api.Common.Errors;
+using BuberDinner.Api;
 // using BuberDinner.Api.Middleware;
 using BuberDinner.Application;
 using BuberDinner.Infrastructure;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,17 +12,19 @@ var builder = WebApplication.CreateBuilder(args);
 //     options => options.Filters.Add<ErrorHandlingFilterAttribute>()
 // );
 
-builder.Services.AddControllers();
 
 // builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 // we moved this line to Applicaiton Layer, by using the DependencyInjection.Abstractions package
 builder.Services
+    .AddPresentation()  //add all dependencies of Api layer <- defined in DependencyInjection.cs
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 
+// move to Dependency Injection
+// builder.Services.AddControllers();
 // Opt 3 step 2: custom ProblemDetails factory w additional properties
 // custom Problem() to add custom properties
-builder.Services.AddSingleton<ProblemDetailsFactory, BDProblemDetailsFactory>();
+// builder.Services.AddSingleton<ProblemDetailsFactory, BDProblemDetailsFactory>();
 
 var app = builder.Build();
 

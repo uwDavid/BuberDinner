@@ -84,3 +84,6 @@
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.Contracts.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.Core.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.DependencyInjection.dll
