@@ -87,3 +87,7 @@
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.Core.dll
 /home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.DependencyInjection.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/purple/0Code/5dotnet/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.MvcApplicationPartsAssemblyInfo.cs
